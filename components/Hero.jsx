@@ -9,6 +9,7 @@ import { MdOutlineOfflineBolt } from "react-icons/md";
 import { HiBolt } from "react-icons/hi2";
 import { MdOutlineTimer } from "react-icons/md";
 import { RiTimerFlashFill } from "react-icons/ri";
+import { MdOutlineArrowDropDownCircle } from "react-icons/md";
 
 import {
   RiBriefcase4Fill,
@@ -27,9 +28,9 @@ import DevImg from "./DevImg";
 
 const Hero = () => {
   return (
-    <section className="py-12 xl:py-24 h-[84vh] xl:pt-28 bg-hero bg-no-repeat bg-bottom bg-cover dark:bg-none overflow-x-hidden">
+    <section className="py-12 xl:py-24 h-[84vh] xl:pt-28 bg-hero bg-no-repeat bg-bottom bg-cover dark:bg-none xl:overflow-hidden">
       <motion.div
-        className="overflow-hidden"
+        className=""
         variants={{
           initial: {
             opacity: 0,
@@ -81,7 +82,7 @@ const Hero = () => {
               {/* socials */}
               <Socials
                 containerStyles="flex gap-x-6 mx-auto xl:mx-0"
-                iconsStyles="text-foreground text-[22px] hover:text-primary transition-all"
+                iconsStyles="text-foreground text-[32px]  hover:text-primary transition-all"
               />
             </div>
             {/* image */}
@@ -140,7 +141,7 @@ const Hero = () => {
           </div>
           {/* icon */}
           <div className="hidden md:flex absolute left-2/4 bottom-44 xl:bottom-12 animate-bounce">
-            <RiArrowDownSLine className="text-3xl text-primary" />
+            <MdOutlineArrowDropDownCircle className="text-3xl text-primary" />
           </div>
         </div>
       </motion.div>
