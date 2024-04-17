@@ -1,0 +1,422 @@
+"use client";
+import DevImg from "./DevImg";
+import Image from "next/image";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { LuCircleSlash } from "react-icons/lu";
+import { motion } from "framer-motion";
+import { SiSitecore } from "react-icons/si";
+import { FaExternalLinkSquareAlt } from "react-icons/fa";
+
+import {
+  MdPerson,
+  MdPhoneInTalk,
+  MdEmail,
+  MdSchool,
+  MdLocationOn,
+  MdWork,
+} from "react-icons/md";
+
+import {
+  User2,
+  MailIcon,
+  HomeIcon,
+  PhoneCall,
+  GraduationCap,
+  Calendar,
+  Briefcase,
+} from "lucide-react";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+
+// import "./styles.css";
+
+// import required modules
+import { Pagination } from "swiper/modules";
+import Link from "next/link";
+
+const infoData = [
+  {
+    icon: <MdPerson size={20} />,
+    text: "Mateusz Kudraj",
+  },
+  {
+    icon: <MdPhoneInTalk size={20} />,
+    text: "+48 516 411 012",
+  },
+  {
+    icon: <MdEmail size={20} />,
+    text: "kudraj.mateusz@gmail.com",
+  },
+  // {
+  //   icon: <Calendar size={20} />,
+  //   text: "Born on 10 Mar, 1998",
+  // },
+  {
+    icon: <MdSchool size={20} />,
+    text: "Computer Science student",
+  },
+  {
+    icon: <MdLocationOn size={20} />,
+    text: "Gdańsk, Poland",
+  },
+];
+
+const qualificationData = [
+  {
+    title: "education",
+    data: [
+      {
+        university: "Polish Naval Academy, Gdynia",
+        qualification: "Bachelor of Computer Science",
+        years: "2017 - 2020",
+      },
+    ],
+  },
+  {
+    title: "experience",
+    data: [
+      {
+        company: "SoftServe Poland",
+        role: "Frontend Developer / Sitecore Developer",
+        years: "2022 - Present",
+      },
+      {
+        company: "BLACK CORE Sp.z.o.o.",
+        role: "Frontend Developer / Webmaster",
+        years: "2021 - 2022",
+      },
+    ],
+  },
+];
+
+const skillData = [
+  {
+    title: "skills",
+    data: [
+      {
+        name: "Javascript, HTML, CSS, SCSS, TailwindCSS, Bootstrap",
+      },
+      {
+        name: "React, Next.js, Typescript",
+      },
+      {
+        name: "Sitecore, GraphQL, REST API, Postman",
+      },
+      {
+        name: "Photoshop, Figma, VSCode",
+      },
+    ],
+  },
+  {
+    title: "tools",
+    data: [
+      {
+        imgPath: "/about/vscode.svg",
+      },
+      {
+        imgPath: "/about/figma.svg",
+      },
+      {
+        imgPath: "/about/notion.svg",
+      },
+      {
+        imgPath: "/about/wordpress.svg",
+      },
+    ],
+  },
+];
+
+const About = () => {
+  const getData = (arr, title) => {
+    return arr.find((item) => item.title === title);
+  };
+
+  return (
+    <section className="xl:h-[860px] pb-12 xl:py-24">
+      <div className="container mx-auto">
+        <h2 className="section-title text-center mx-auto mb-8">
+          <LuCircleSlash
+            size={20}
+            className="dark:text-[#92E3A9] text-primary"
+          />
+          About me
+        </h2>
+        <div className="flex flex-col xl:flex-row">
+          {/* image */}
+          <div className="hidden xl:flex flex-1 relative">
+            <motion.div
+              className=""
+              animate={{
+                y: [-10, 10],
+                rotate: [0, 2],
+                transition: {
+                  duration: 5,
+                  repeat: Infinity,
+                  // repeatDelay: 0.2,
+                  repeatType: "reverse",
+                },
+              }}
+            >
+              <DevImg
+                containerStyles="bg-about_shape_light dark:bg-about_shape_dark w-[505px] h-[505px] bg-no-repeat relative scale-x-[-1]"
+                imgSrc="/about/coding-hands.svg"
+              />
+            </motion.div>
+          </div>
+          {/* tabs */}
+          <div className="flex-1">
+            <Tabs defaultValue="personal">
+              <TabsList className=" w-full grid xl:grid-cols-3 xl:max-w-[520px] xl:border dark:border-none">
+                <TabsTrigger
+                  className="w-[162px] xl:w-auto xl:text-md text-sm"
+                  value="personal"
+                >
+                  Personal Info
+                </TabsTrigger>
+
+                <TabsTrigger className="w-[162px] xl:w-auto " value="skills">
+                  Skills
+                </TabsTrigger>
+                <TabsTrigger
+                  className="w-[162px] xl:w-auto "
+                  value="qualifications"
+                >
+                  Qualifications
+                </TabsTrigger>
+              </TabsList>
+              {/* tabs content */}
+              <div className="text-lg mt-4 xl:mt-8">
+                {/* personal */}
+                <TabsContent value="personal">
+                  <div className="text-center xl:text-left">
+                    {/* icons */}
+                    <div className="grid xl:grid-cols-2 gap-4 mb-12">
+                      {infoData.map((item, index) => {
+                        return (
+                          <div
+                            className="flex items-center gap-x-4 mx-auto xl:mx-0"
+                            key={index}
+                          >
+                            <div className="text-primary">{item.icon}</div>
+                            <div>{item.text}</div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                    {/* languages */}
+                    <div className="flex flex-col gap-y-2">
+                      <div className="text-primary">Language Skill</div>
+                      <div className="border-b border-border"></div>
+                      <div>
+                        English (C1), Polish (native), Ukrainian (A1), Russian
+                        (A1)
+                      </div>
+                    </div>
+                  </div>
+                </TabsContent>
+                {/* qualifications */}
+                <TabsContent value="qualifications">
+                  <div>
+                    {/* experience & education wrapper */}
+                    <div className="grid md:grid-cols-2 gap-y-8">
+                      {/* experience */}
+                      <div className="flex flex-col gap-y-6">
+                        <div className="flex gap-x-4 items-center text-[22px] text-primary">
+                          <MdWork />
+                          <h4 className="capitalize font-medium">
+                            {getData(qualificationData, "experience").title}
+                          </h4>
+                        </div>
+                        {/* list */}
+                        <div className="flex flex-col gap-y-8">
+                          {getData(qualificationData, "experience").data.map(
+                            (item, index) => {
+                              const { company, role, years } = item;
+                              return (
+                                <div className="flex gap-x-8 group" key={index}>
+                                  <div className="h-[84px] w-[1px] bg-border relative ml-2">
+                                    <div className="w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px] hover:translate-y-[84px] transition-all duration-48"></div>
+                                  </div>
+                                  <div>
+                                    <div className="font-semibold text-xl leading-none mb-2">
+                                      {company}
+                                    </div>
+                                    <div className="text-lg leading-none text-muted-foreground mb-4">
+                                      {role}
+                                    </div>
+                                    <div className="text-base font-medium">
+                                      {years}
+                                    </div>
+                                  </div>
+                                </div>
+                              );
+                            }
+                          )}
+                        </div>
+                      </div>
+                      {/* education */}
+                      <div className="flex flex-col gap-y-6">
+                        <div className="flex gap-x-4 items-center text-[22px] text-primary">
+                          <MdSchool size={28} />
+                          <h4 className="capitalize font-medium">
+                            {getData(qualificationData, "education").title}
+                          </h4>
+                        </div>
+                        {/* list */}
+                        <div className="flex flex-col gap-y-8">
+                          {getData(qualificationData, "education").data.map(
+                            (item, index) => {
+                              const { university, qualification, years } = item;
+                              return (
+                                <div className="flex gap-x-8 group" key={index}>
+                                  <div className="h-[84px] w-[1px] bg-border relative ml-2">
+                                    <div className="w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px] hover:translate-y-[84px] transition-all duration-48"></div>
+                                  </div>
+                                  <div>
+                                    <div className="font-semibold text-xl leading-none mb-2">
+                                      {university}
+                                    </div>
+                                    <div className="text-lg leading-none text-muted-foreground mb-4">
+                                      {qualification}
+                                    </div>
+                                    <div className="text-base font-medium">
+                                      {years}
+                                    </div>
+                                  </div>
+                                </div>
+                              );
+                            }
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </TabsContent>
+                {/* skills */}
+
+                <TabsContent value="skills">
+                  <div className="text-center xl:text-left mb-4">
+                    {/* skills */}
+                    <div className="mb-4">
+                      <h4 className="text-xl font-semibold mb-2">Skills</h4>
+                      <div className="border-b border-border mb-4"></div>
+                      {/* skill list */}
+                      <div>
+                        {getData(skillData, "skills").data.map(
+                          (item, index) => {
+                            const { name } = item;
+                            return (
+                              <div
+                                className="text-center xl:text-left mx-auto xl:mx-0"
+                                key={index}
+                              >
+                                <div className="font-medium">{name}</div>
+                              </div>
+                            );
+                          }
+                        )}
+                      </div>
+                    </div>
+                    <div>
+                      <div className="flex items-center gap-2 flex-wrap xl:justify-start justify-center">
+                        <img
+                          className="transition-transform duration-300 transform hover:-translate-y-2 xl:size-[2.75rem] size-[2rem]"
+                          // src="https://skillicons.dev/icons?i=react,next,tailwind,ts,js,html,cs,vscode,ps"
+                          src="https://skillicons.dev/icons?i=react"
+                          alt=""
+                        />
+                        <img
+                          className="transition-transform duration-300 transform hover:-translate-y-2 xl:size-[2.75rem] size-[2rem]"
+                          src="https://skillicons.dev/icons?i=next"
+                          alt=""
+                        />
+                        <img
+                          className="transition-transform duration-300 transform hover:-translate-y-2 xl:size-[2.75rem] size-[2rem]"
+                          src="https://skillicons.dev/icons?i=ts"
+                          alt=""
+                        />
+                        <img
+                          className="transition-transform duration-300 transform hover:-translate-y-2 xl:size-[2.75rem] size-[2rem]"
+                          src="https://skillicons.dev/icons?i=js"
+                          alt=""
+                        />
+                        <img
+                          className="transition-transform duration-300 transform hover:-translate-y-2 xl:size-[2.75rem] size-[2rem]"
+                          src="https://skillicons.dev/icons?i=html"
+                          alt=""
+                        />
+                        <img
+                          className="transition-transform duration-300 transform hover:-translate-y-2 xl:size-[2.75rem] size-[2rem]"
+                          src="https://skillicons.dev/icons?i=css"
+                          alt=""
+                        />
+                        <img
+                          className="transition-transform duration-300 transform hover:-translate-y-2 xl:size-[2.75rem] size-[2rem]"
+                          src="https://skillicons.dev/icons?i=ps"
+                          alt=""
+                        />
+                        <img
+                          className="transition-transform duration-300 transform hover:-translate-y-2 xl:size-[2.75rem] size-[2rem]"
+                          src="https://skillicons.dev/icons?i=postman"
+                          alt=""
+                        />
+                        <img
+                          className="transition-transform duration-300 transform hover:-translate-y-2 xl:size-[2.75rem] size-[2rem]"
+                          src="https://skillicons.dev/icons?i=graphql"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="text-center xl:text-left mb-4">
+                    {/* certificates */}
+                    <h4 className="text-xl font-semibold mb-2">Certificates</h4>
+                    <div className="border-b border-border mb-4"></div>
+                    <div className="flex flex-wrap gap-4 flex-col">
+                      <Link
+                        href="https://cert.efset.org/gSML9z"
+                        target="_blank"
+                        className="flex items-center gap-2 text-pink-500 justify-center xl:justify-start"
+                      >
+                        <FaExternalLinkSquareAlt className="hidden md:block" />
+                        English Certificate EFSET (C1 Advanced)
+                        <Image
+                          className="hidden md:block"
+                          src="/about/efset.png"
+                          width={25}
+                          height={25}
+                        />
+                      </Link>
+                      <Link
+                        href="https://drive.google.com/file/d/1sHPOwyaxx9QQXYTypFWE4fZzkGEfCk7V/view"
+                        target="_blank"
+                        className="flex items-center gap-2 text-[#069399] justify-center xl:justify-start"
+                      >
+                        <FaExternalLinkSquareAlt className="hidden md:block" />
+                        Sitecore OrderCloud
+                        <Image
+                          className="hidden md:block"
+                          src="/about/sitecore-oc.png"
+                          width={25}
+                          height={25}
+                        />
+                        <SiSitecore className="text-red-500" />
+                      </Link>
+                      {/* SiSitecore */}
+                    </div>
+                  </div>
+                </TabsContent>
+              </div>
+            </Tabs>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default About;
