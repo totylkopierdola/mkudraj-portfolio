@@ -2,8 +2,8 @@
 import DevImg from "./DevImg";
 import Image from "next/image";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { LuCircleSlash } from "react-icons/lu";
 import { motion } from "framer-motion";
+import { LuCircleSlash } from "react-icons/lu";
 import { SiSitecore } from "react-icons/si";
 import { FaExternalLinkSquareAlt } from "react-icons/fa";
 
@@ -16,26 +16,6 @@ import {
   MdWork,
 } from "react-icons/md";
 
-import {
-  User2,
-  MailIcon,
-  HomeIcon,
-  PhoneCall,
-  GraduationCap,
-  Calendar,
-  Briefcase,
-} from "lucide-react";
-
-import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-
-// import "./styles.css";
-
-// import required modules
-import { Pagination } from "swiper/modules";
 import Link from "next/link";
 
 const infoData = [
@@ -51,10 +31,6 @@ const infoData = [
     icon: <MdEmail size={20} />,
     text: "kudraj.mateusz@gmail.com",
   },
-  // {
-  //   icon: <Calendar size={20} />,
-  //   text: "Born on 10 Mar, 1998",
-  // },
   {
     icon: <MdSchool size={20} />,
     text: "Computer Science student",
@@ -111,23 +87,6 @@ const skillData = [
       },
     ],
   },
-  {
-    title: "tools",
-    data: [
-      {
-        imgPath: "/about/vscode.svg",
-      },
-      {
-        imgPath: "/about/figma.svg",
-      },
-      {
-        imgPath: "/about/notion.svg",
-      },
-      {
-        imgPath: "/about/wordpress.svg",
-      },
-    ],
-  },
 ];
 
 const About = () => {
@@ -151,7 +110,7 @@ const About = () => {
             <motion.div
               className=""
               animate={{
-                y: [-10, 10],
+                y: [-50, -40],
                 rotate: [0, 2],
                 transition: {
                   duration: 5,
@@ -325,7 +284,6 @@ const About = () => {
                       <div className="flex items-center gap-2 flex-wrap xl:justify-start justify-center">
                         <img
                           className="transition-transform duration-300 transform hover:-translate-y-2 xl:size-[2.75rem] size-[2rem]"
-                          // src="https://skillicons.dev/icons?i=react,next,tailwind,ts,js,html,cs,vscode,ps"
                           src="https://skillicons.dev/icons?i=react"
                           alt=""
                         />
@@ -406,7 +364,6 @@ const About = () => {
                         />
                         <SiSitecore className="text-red-500" />
                       </Link>
-                      {/* SiSitecore */}
                     </div>
                   </div>
                 </TabsContent>

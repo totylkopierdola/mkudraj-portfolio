@@ -1,31 +1,15 @@
 "use client";
+import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "./ui/button";
 import { Download, Send } from "lucide-react";
-import { PiSelectionBackgroundDuotone } from "react-icons/pi";
-import { TbCircleHalf2 } from "react-icons/tb";
 import { motion } from "framer-motion";
-import { MdOutlineOfflineBolt } from "react-icons/md";
-import { HiBolt } from "react-icons/hi2";
-import { MdOutlineTimer } from "react-icons/md";
-import { RiTimerFlashFill } from "react-icons/ri";
-import { MdOutlineArrowDropDownCircle } from "react-icons/md";
-
-import {
-  RiBriefcase4Fill,
-  RiTeamFill,
-  RiTodoFill,
-  RiArrowDownSLine,
-} from "react-icons/ri";
-
-// components
-// import DevImg from "./DevImg";
-// import Badge from "./Badge";
 import Socials from "./Socials";
-import Image from "next/image";
 import Badge from "./Badge";
-import DevImg from "./DevImg";
-import { useState } from "react";
+import { HiBolt } from "react-icons/hi2";
+import { MdOutlineArrowDropDownCircle } from "react-icons/md";
+import { RiBriefcase4Fill, RiTimerFlashFill } from "react-icons/ri";
 
 const Hero = () => {
   const [animationCompleted, setAnimationCompleted] = useState(false);
@@ -36,15 +20,13 @@ const Hero = () => {
         variants={{
           initial: {
             opacity: 0,
-            x: "20%", // Start position from the right
+            x: "20%",
           },
           animate: {
             opacity: 1,
-            x: 0, // End position at the center
+            x: 0,
             transition: {
               type: "spring",
-              // type: "tween",
-              // type: "intertia",
               stiffness: 100,
             },
           },
@@ -73,10 +55,15 @@ const Hero = () => {
                     Contact me <Send size={18} />
                   </Button>
                 </Link>
-                <Button variant="secondary" className="gap-x-2">
-                  Download CV
-                  <Download size={18} />
-                </Button>
+                <Link
+                  href="https://drive.google.com/file/d/1haItTyNRx9BsTAcDAO-VevFi4OGTEr5r/view?usp=sharing"
+                  target="_blank"
+                >
+                  <Button variant="secondary" className="gap-x-2">
+                    Download CV
+                    <Download size={18} />
+                  </Button>
+                </Link>
               </div>
               {/* socials */}
               <Socials
@@ -98,8 +85,6 @@ const Hero = () => {
               <Badge
                 containerStyles="absolute top-[76%] -left-[1rem]"
                 icon={<RiTimerFlashFill />}
-                // endCountNum={6}
-                // endCountText="k"
                 badgeText="Always on Time"
                 nowrap
                 jumpOnHover
@@ -108,8 +93,6 @@ const Hero = () => {
               <Badge
                 containerStyles="absolute top-[15%] -right-8"
                 icon={<HiBolt />}
-                // endCountNum={9}
-                // endCountText="k"
                 badgeText="Swift & Efficient"
                 nowrap
                 jumpOnHover
@@ -123,7 +106,6 @@ const Hero = () => {
                   transition: {
                     duration: 5,
                     repeat: Infinity,
-                    // repeatDelay: 0.2,
                     repeatType: "reverse",
                   },
                 }}

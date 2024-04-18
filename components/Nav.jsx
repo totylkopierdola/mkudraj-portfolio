@@ -17,7 +17,7 @@ const Nav = ({ containerStyles, linkStyles, underlineStyles }) => {
           <Link
             href={link.path}
             key={index}
-            className={`capitalize ${linkStyles}`}
+            className={`capitalize ${linkStyles} relative`}
           >
             {link.path === path && (
               <motion.span
@@ -28,7 +28,12 @@ const Nav = ({ containerStyles, linkStyles, underlineStyles }) => {
                 className={`${underlineStyles}`}
               />
             )}
-            {link.name}
+            {link.name}{" "}
+            {link.name === "my projects" && (
+              <span className="absolute  uppercase text-[0.6rem] -top-[8px] -right-2 rotate-[9deg] ">
+                soon !
+              </span>
+            )}
           </Link>
         );
       })}
