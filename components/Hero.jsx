@@ -8,8 +8,9 @@ import { motion } from "framer-motion";
 import Socials from "./Socials";
 import Badge from "./Badge";
 import { HiBolt } from "react-icons/hi2";
-import { MdOutlineArrowDropDownCircle } from "react-icons/md";
 import { RiBriefcase4Fill, RiTimerFlashFill } from "react-icons/ri";
+import { IoMdArrowDropdown } from "react-icons/io";
+import { MdKeyboardArrowDown } from "react-icons/md";
 
 const Hero = () => {
   const [animationCompleted, setAnimationCompleted] = useState(false);
@@ -51,7 +52,7 @@ const Hero = () => {
               {/* buttons */}
               <div className="flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12">
                 <Link href="/contact">
-                  <Button className="gap-x-2">
+                  <Button className="gap-x-2" size="lg">
                     Contact me <Send size={18} />
                   </Button>
                 </Link>
@@ -59,7 +60,7 @@ const Hero = () => {
                   href="https://drive.google.com/file/d/1haItTyNRx9BsTAcDAO-VevFi4OGTEr5r/view?usp=sharing"
                   target="_blank"
                 >
-                  <Button variant="secondary" className="gap-x-2">
+                  <Button variant="secondary" className="gap-x-2" size="lg">
                     Download CV
                     <Download size={18} />
                   </Button>
@@ -77,7 +78,7 @@ const Hero = () => {
               <Badge
                 containerStyles="absolute top-[24%] -left-[5rem]"
                 icon={<RiBriefcase4Fill />}
-                endCountNum={3}
+                endCountNum={"3"}
                 badgeText="Years Of Experience"
                 jumpOnHover
               />
@@ -128,7 +129,8 @@ const Hero = () => {
             " transition-opacity opacity-100 duration-1000 "
           }`}
         >
-          <MdOutlineArrowDropDownCircle className="text-3xl text-primary" />
+          {/* <MdOutlineArrowDropDownCircle className="text-3xl text-primary" /> */}
+          <MdKeyboardArrowDown className="text-4xl text-primary" />
         </div>
       </motion.div>
     </section>

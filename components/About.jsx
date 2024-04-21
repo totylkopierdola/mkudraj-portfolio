@@ -121,24 +121,23 @@ const About = () => {
               }}
             >
               <DevImg
-                containerStyles="bg-about_shape_light dark:bg-about_shape_dark w-[505px] h-[505px] bg-no-repeat relative scale-x-[-1]"
+                containerStyles="bg-about_shape_light dark:bg-about_shape_dark w-[605px] h-[605px] bg-no-repeat relative scale-x-[-1]"
                 imgSrc="/about/coding-hands.svg"
               />
             </motion.div>
           </div>
           {/* tabs */}
           <div className="flex-1">
-            <Tabs defaultValue="personal">
+            <Tabs defaultValue="skills">
               <TabsList className=" w-full grid xl:grid-cols-3 xl:max-w-[520px] xl:border dark:border-none">
+                <TabsTrigger className="w-[162px] xl:w-auto " value="skills">
+                  Skills
+                </TabsTrigger>
                 <TabsTrigger
                   className="w-[162px] xl:w-auto xl:text-md text-sm"
                   value="personal"
                 >
                   Personal Info
-                </TabsTrigger>
-
-                <TabsTrigger className="w-[162px] xl:w-auto " value="skills">
-                  Skills
                 </TabsTrigger>
                 <TabsTrigger
                   className="w-[162px] xl:w-auto "
@@ -171,8 +170,10 @@ const About = () => {
                       <div className="text-primary">Language Skill</div>
                       <div className="border-b border-border"></div>
                       <div>
-                        English (C1), Polish (native), Ukrainian (A1), Russian
-                        (A1)
+                        English (C1), <br />
+                        Polish (native), <br />
+                        Ukrainian (A1), <br />
+                        Russian (A1)
                       </div>
                     </div>
                   </div>
