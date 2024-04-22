@@ -348,6 +348,7 @@ const About = () => {
                           src="/about/efset.png"
                           width={25}
                           height={25}
+                          alt=""
                         />
                       </Link>
                       <Link
@@ -362,6 +363,7 @@ const About = () => {
                           src="/about/sitecore-oc.png"
                           width={25}
                           height={25}
+                          alt=""
                         />
                         <SiSitecore className="text-red-500" />
                       </Link>

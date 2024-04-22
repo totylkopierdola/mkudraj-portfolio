@@ -118,6 +118,7 @@ const Hero = () => {
                 width={450}
                 height={450}
                 className="z-[1] w-[450px] h-[450px]"
+                alt=""
               />
             </div>
           </div>
