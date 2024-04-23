@@ -6,7 +6,6 @@ import Nav from "./Nav";
 import MobileNav from "./MobileNav";
 import { useTheme } from "next-themes";
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -26,7 +25,7 @@ const Header = () => {
 
     // remove event
     return () => window.removeEventListener("scroll", scrollYPos);
-  });
+  }, []);
 
   return (
     <header
@@ -38,16 +37,9 @@ const Header = () => {
     >
       <div className="container mx-auto">
         <div className="flex justify-between items-center">
-          <motion.div
-            initial={{ scale: 1 }}
-            animate={{ scale: [1, 2, 1] }}
-            transition={{ duration: 0.3 }}
-            className="cursor-pointer"
-          >
-            <Link href="/">
-              {isClient && theme === "light" ? <LogoDark /> : <LogoLight />}
-            </Link>
-          </motion.div>
+          <Link href="/">
+            {isClient && theme === "light" ? <LogoDark /> : <LogoLight />}
+          </Link>
           <div className="flex w-full justify-end items-center gap-x-6 mr-4">
             <Nav
               containerStyles="hidden xl:flex gap-x-8 items-center"

@@ -6,7 +6,7 @@ const LogoLight = () => {
     <>
       <div className="size-[60px] flex items-center justify-center hover:scale-[1.2] duration-300">
         <Image
-          src="/LOGOlight.png"
+          src="/LOGOlight-small.png"
           alt="logo"
           width={100}
           height={100}

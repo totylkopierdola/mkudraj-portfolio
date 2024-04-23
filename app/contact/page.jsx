@@ -26,7 +26,7 @@ const Contact = () => {
               <span className="w-[30px] h-[2px] bg-primary"></span>
               Say Hello 👋
             </div>
-            <h1 className="h1 max-w-md mb-8">Let's Work Together.</h1>
+            <h1 className="h1 max-w-md mb-8">Let&apos;s Work Together.</h1>
             <p className="subtitle max-w-[400px]">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat,
               nostrum.
@@ -37,11 +37,12 @@ const Contact = () => {
           <div className="flex justify-center">
             {isClient && theme === "dark" && (
               <Image
-                className="hidden xl:flex opacity-90"
+                className="hidden xl:flex opacity-90 w-[350px] h-[350px]"
                 src="/contact/bg2.svg"
                 width="350"
                 height="350"
                 alt=""
+                priority
               />
             )}
             {isClient && theme === "light" && (
@@ -51,6 +52,7 @@ const Contact = () => {
                 width="450"
                 height="450"
                 alt=""
+                priority
               />
             )}
           </div>
@@ -77,7 +79,7 @@ const Contact = () => {
                   className="cursor-pointer"
                   onClick={() => setPhoneNumberVisible(true)}
                 >
-                  Click to show
+                  Click to show number
                 </span>
               )}
               {isClient && theme === "dark" && isPhoneNumberVisible && (

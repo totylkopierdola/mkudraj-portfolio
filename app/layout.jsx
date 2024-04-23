@@ -13,15 +13,6 @@ export const metadata = {
   title: "Mateusz Kudraj | Experienced Web Developer",
   description:
     "Mateusz Kudraj, an experienced web developer with 3+ years in crafting responsive websites. Eager for new challenges and ready to elevate your digital presence. Let's collaborate!",
-  icons: {
-    icon: "/icon.png",
-    shortcut: "/icon.png",
-    apple: "/apple-icon.png",
-    other: {
-      rel: "apple-touch-icon-precomposed",
-      url: "/apple-touch-icon-precomposed.png",
-    },
-  },
 };
 
 export default function RootLayout({ children }) {

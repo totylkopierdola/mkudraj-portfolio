@@ -283,50 +283,68 @@ const About = () => {
                     </div>
                     <div>
                       <div className="flex items-center gap-2 flex-wrap xl:justify-start justify-center">
-                        <img
+                        <Image
+                          src="/about/technologies/react.svg"
                           className="transition-transform duration-300 transform hover:-translate-y-2 xl:size-[2.75rem] size-[2rem]"
-                          src="https://skillicons.dev/icons?i=react"
-                          alt=""
+                          width={50}
+                          height={50}
+                          alt="react"
                         />
-                        <img
+                        <Image
+                          src="/about/technologies/nextjs.svg"
                           className="transition-transform duration-300 transform hover:-translate-y-2 xl:size-[2.75rem] size-[2rem]"
-                          src="https://skillicons.dev/icons?i=next"
-                          alt=""
+                          width={50}
+                          height={50}
+                          alt="nextjs"
                         />
-                        <img
+                        <Image
+                          src="/about/technologies/ts.svg"
                           className="transition-transform duration-300 transform hover:-translate-y-2 xl:size-[2.75rem] size-[2rem]"
-                          src="https://skillicons.dev/icons?i=ts"
-                          alt=""
+                          width={50}
+                          height={50}
+                          alt="typescript"
                         />
-                        <img
+                        <Image
+                          src="/about/technologies/js.svg"
                           className="transition-transform duration-300 transform hover:-translate-y-2 xl:size-[2.75rem] size-[2rem]"
-                          src="https://skillicons.dev/icons?i=js"
-                          alt=""
+                          width={50}
+                          height={50}
+                          alt="javascript"
                         />
-                        <img
+                        <Image
+                          src="/about/technologies/html.svg"
                           className="transition-transform duration-300 transform hover:-translate-y-2 xl:size-[2.75rem] size-[2rem]"
-                          src="https://skillicons.dev/icons?i=html"
-                          alt=""
+                          width={50}
+                          height={50}
+                          alt="html"
                         />
-                        <img
+                        <Image
+                          src="/about/technologies/css.svg"
                           className="transition-transform duration-300 transform hover:-translate-y-2 xl:size-[2.75rem] size-[2rem]"
-                          src="https://skillicons.dev/icons?i=css"
-                          alt=""
+                          width={50}
+                          height={50}
+                          alt="css"
                         />
-                        <img
+                        <Image
+                          src="/about/technologies/ps.svg"
                           className="transition-transform duration-300 transform hover:-translate-y-2 xl:size-[2.75rem] size-[2rem]"
-                          src="https://skillicons.dev/icons?i=ps"
-                          alt=""
+                          width={50}
+                          height={50}
+                          alt="photoshop"
                         />
-                        <img
+                        <Image
+                          src="/about/technologies/postman.svg"
                           className="transition-transform duration-300 transform hover:-translate-y-2 xl:size-[2.75rem] size-[2rem]"
-                          src="https://skillicons.dev/icons?i=postman"
-                          alt=""
+                          width={50}
+                          height={50}
+                          alt="postman"
                         />
-                        <img
+                        <Image
+                          src="/about/technologies/graphql.svg"
                           className="transition-transform duration-300 transform hover:-translate-y-2 xl:size-[2.75rem] size-[2rem]"
-                          src="https://skillicons.dev/icons?i=graphql"
-                          alt=""
+                          width={50}
+                          height={50}
+                          alt="graphql"
                         />
                       </div>
                     </div>

@@ -86,7 +86,7 @@ const Form = () => {
         className="flex items-center gap-x-1 max-w-[166px]"
         type="submit"
       >
-        Let's Talk
+        Let&apos;s Talk
         <ArrowRightIcon size={20} />
       </Button>
     </form>

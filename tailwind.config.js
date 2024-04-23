@@ -66,10 +66,32 @@ module.exports = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        bounce: {
+          "0%, 100%": {
+            transform: "translateY(-5%)",
+            animationTimingFunction: "cubic-bezier(0.8, 0, 1, 1)",
+          },
+          "50%": {
+            transform: "translateY(0)",
+            animationTimingFunction: "cubic-bezier(0, 0, 0.2, 1)",
+          },
+        },
+        bouncedeeper: {
+          "0%, 100%": {
+            transform: "translateY(-30%)",
+            animationTimingFunction: "cubic-bezier(0.8, 0, 1, 1)",
+          },
+          "50%": {
+            transform: "translateY(0)",
+            animationTimingFunction: "cubic-bezier(0, 0, 0.2, 1)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "animate-bouncetwo": "animation: bounceTwo 10s infinite",
+        bouncedeeper: "bouncedeeper 1s infinite",
       },
       backgroundImage: {
         // hero: "url(/hero/hero-bg.png)",
@@ -81,8 +103,8 @@ module.exports = {
         // about_shape_dark: "url(/about/shape-dark.svg)",
         dots_light: "url(/dots-light.svg)",
         dots_dark: "url(/dots-dark.svg)",
-        // work_project_bg_light: "url(/work/project-bg-light.png)",
-        // work_project_bg_dark: "url(/work/project-bg-dark.png)",
+        work_project_bg_light: "url(/work/project-bg-light.png)",
+        work_project_bg_dark: "url(/work/project-bg-dark.png)",
         // contact_illustration_light: "url(/contact/illustration-light.svg)",
         // contact_illustration_dark: "url(/contact/illustration-dark.svg)",
       },
