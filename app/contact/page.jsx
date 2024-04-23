@@ -1,6 +1,6 @@
 "use client";
 import { MailIcon, HomeIcon, PhoneCall } from "lucide-react";
-import Form from "@/components/Form";
+import Form from "@/components/ui/Form";
 import Image from "next/image";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
@@ -25,8 +25,8 @@ const Contact = () => {
             </div>
             <h1 className="h1 max-w-md mb-8">Let&apos;s Work Together.</h1>
             <p className="subtitle max-w-[400px]">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat,
-              nostrum.
+              If you are interested in my work or have any questions, feel free
+              to contact me. I&apos;ll get back to you as soon as possible.
             </p>
           </div>
           <div className="flex justify-center">

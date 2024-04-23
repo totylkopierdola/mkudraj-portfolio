@@ -5,7 +5,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
+} from "@/components/ui/external/card";
 import { LuCircleSlash } from "react-icons/lu";
 
 const servicesData = [

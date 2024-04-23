@@ -1,7 +1,7 @@
 "use client";
 
 import { Moon, SunMedium } from "lucide-react";
-import { Button } from "./ui/button";
+import { Button } from "./external/button";
 import { useTheme } from "next-themes";
 
 const ThemeToggler = () => {

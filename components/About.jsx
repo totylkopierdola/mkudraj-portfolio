@@ -1,7 +1,12 @@
 "use client";
-import DevImg from "./DevImg";
+import DevImg from "./ui/DevImg";
 import Image from "next/image";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from "@/components/ui/external/tabs";
 import { motion } from "framer-motion";
 import { LuCircleSlash } from "react-icons/lu";
 import { SiSitecore } from "react-icons/si";
@@ -17,6 +22,7 @@ import {
 } from "react-icons/md";
 
 import Link from "next/link";
+import Technologies from "./ui/Technologies";
 
 const infoData = [
   {
@@ -106,7 +112,7 @@ const About = () => {
         </h2>
         <div className="flex flex-col xl:flex-row">
           <div className="hidden xl:flex flex-1 relative">
-            <motion.div
+            {/* <motion.div
               className=""
               animate={{
                 y: [-50, -40],
@@ -117,12 +123,12 @@ const About = () => {
                   repeatType: "reverse",
                 },
               }}
-            >
-              <DevImg
-                containerStyles="bg-about_shape_light dark:bg-about_shape_dark w-[605px] h-[605px] bg-no-repeat relative scale-x-[-1]"
-                imgSrc="/about/coding-hands.svg"
-              />
-            </motion.div>
+            > */}
+            <DevImg
+              containerStyles="w-[605px] h-[605px] bg-no-repeat relative scale-x-[-1] animate-bouncetwo"
+              imgSrc="/about/coding-hands.svg"
+            />
+            {/* </motion.div> */}
           </div>
           {/* tabs */}
           <div className="flex-1">
@@ -267,73 +273,7 @@ const About = () => {
                         )}
                       </div>
                     </div>
-                    <div>
-                      <div className="flex items-center gap-2 flex-wrap xl:justify-start justify-center">
-                        <Image
-                          src="/about/technologies/react.svg"
-                          className="transition-transform duration-300 transform hover:-translate-y-2 xl:size-[2.75rem] size-[2rem]"
-                          width={50}
-                          height={50}
-                          alt="react"
-                        />
-                        <Image
-                          src="/about/technologies/nextjs.svg"
-                          className="transition-transform duration-300 transform hover:-translate-y-2 xl:size-[2.75rem] size-[2rem]"
-                          width={50}
-                          height={50}
-                          alt="nextjs"
-                        />
-                        <Image
-                          src="/about/technologies/ts.svg"
-                          className="transition-transform duration-300 transform hover:-translate-y-2 xl:size-[2.75rem] size-[2rem]"
-                          width={50}
-                          height={50}
-                          alt="typescript"
-                        />
-                        <Image
-                          src="/about/technologies/js.svg"
-                          className="transition-transform duration-300 transform hover:-translate-y-2 xl:size-[2.75rem] size-[2rem]"
-                          width={50}
-                          height={50}
-                          alt="javascript"
-                        />
-                        <Image
-                          src="/about/technologies/html.svg"
-                          className="transition-transform duration-300 transform hover:-translate-y-2 xl:size-[2.75rem] size-[2rem]"
-                          width={50}
-                          height={50}
-                          alt="html"
-                        />
-                        <Image
-                          src="/about/technologies/css.svg"
-                          className="transition-transform duration-300 transform hover:-translate-y-2 xl:size-[2.75rem] size-[2rem]"
-                          width={50}
-                          height={50}
-                          alt="css"
-                        />
-                        <Image
-                          src="/about/technologies/ps.svg"
-                          className="transition-transform duration-300 transform hover:-translate-y-2 xl:size-[2.75rem] size-[2rem]"
-                          width={50}
-                          height={50}
-                          alt="photoshop"
-                        />
-                        <Image
-                          src="/about/technologies/postman.svg"
-                          className="transition-transform duration-300 transform hover:-translate-y-2 xl:size-[2.75rem] size-[2rem]"
-                          width={50}
-                          height={50}
-                          alt="postman"
-                        />
-                        <Image
-                          src="/about/technologies/graphql.svg"
-                          className="transition-transform duration-300 transform hover:-translate-y-2 xl:size-[2.75rem] size-[2rem]"
-                          width={50}
-                          height={50}
-                          alt="graphql"
-                        />
-                      </div>
-                    </div>
+                    <Technologies />
                   </div>
                   <div className="text-center xl:text-left mb-4">
                     <h4 className="text-xl font-semibold mb-2">Certificates</h4>

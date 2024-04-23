@@ -2,10 +2,10 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Button } from "./ui/button";
+import { Button } from "./ui/external/button";
 import { Download, Send } from "lucide-react";
-import Socials from "./Socials";
-import Badge from "./Badge";
+import Socials from "./ui/Socials";
+import Badge from "./ui/Badge";
 import { HiBolt } from "react-icons/hi2";
 import { RiBriefcase4Fill, RiTimerFlashFill } from "react-icons/ri";
 import { MdKeyboardArrowDown } from "react-icons/md";
@@ -18,7 +18,7 @@ const Hero = () => {
 
   return (
     <section
-      className={`py-12 xl:py-24 h-[84vh] xl:pt-28 bg-hero bg-no-repeat bg-bottom bg-cover dark:bg-none xl:overflow-hidden xl:transition-all  transform  xl:overflow-x-hidden xl:duration-1000   ${
+      className={`py-12 xl:py-24 h-[84vh] xl:pt-28 bg-no-repeat bg-bottom bg-cover dark:bg-none xl:overflow-hidden xl:transition-all  transform  xl:overflow-x-hidden xl:duration-1000   ${
         isVisible
           ? "xl:opacity-100 xl:translate-x-[00]"
           : "translate-x-full xl:opacity-0"
@@ -79,8 +79,8 @@ const Hero = () => {
               jumpOnHover
             />
             <div
-              className="bg-hero_shape2_light dark:bg-hero_shape2_dark w-[500px] h-[500px] bg-no-repeat absolute -top-1 -right-2 py-10"
-              style={{ animation: "bounce 10s infinite" }}
+              className="bg-hero_shape2_light dark:bg-hero_shape2_dark w-[500px] h-[500px] bg-no-repeat absolute -top-1 -right-2 py-10 animate-bouncetwo"
+              // style={{ animation: "bounce 10s infinite" }}
             >
               <div className="bg-hero_shape1 w-[510px] h-[462px] bg-no-repeat relative bg-bottom" />
             </div>

@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { Button } from "./ui/button";
-import { Input } from "./ui/input";
-import { Textarea } from "./ui/textarea";
+import { Button } from "../ui/external/button";
+import { Input } from "./external/input";
+import { Textarea } from "./external/textarea";
 import { User, MailIcon, ArrowRightIcon, MessageSquare } from "lucide-react";
 import emailjs from "@emailjs/browser";
 
