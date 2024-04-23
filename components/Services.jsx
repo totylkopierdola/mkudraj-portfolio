@@ -40,7 +40,6 @@ const Services = () => {
           />
           My services
         </h2>
-        {/* grid items */}
         <div className="grid xl:grid-cols-3 justify-center gap-y-12 xl:gap-y-24 xl:gap-x-8">
           {servicesData.map((item, index) => {
             return (

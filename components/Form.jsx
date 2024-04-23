@@ -30,9 +30,9 @@ const Form = () => {
         message: formData.message,
       };
 
-      const serviceId = "service_b8fss1h"; // Replace with your EmailJS Service ID
-      const templateId = "template_jb3bxrz"; // Replace with your EmailJS Template ID
-      const userId = "Foww5omqWQ-Sh6Kag"; // Replace with your EmailJS User ID
+      const serviceId = "service_b8fss1h";
+      const templateId = "template_jb3bxrz";
+      const userId = "Foww5omqWQ-Sh6Kag";
 
       await emailjs.send(serviceId, templateId, templateParams, userId);
 
@@ -50,7 +50,6 @@ const Form = () => {
 
   return (
     <form className="flex flex-col gap-y-4" onSubmit={handleSubmit}>
-      {/* input */}
       <div className="relative flex items-center">
         <Input
           type="text"
@@ -61,7 +60,6 @@ const Form = () => {
         />
         <User className="absolute right-6" size={20} />
       </div>
-      {/* input */}
       <div className="relative flex items-center">
         <Input
           type="email"
@@ -72,7 +70,6 @@ const Form = () => {
         />
         <MailIcon className="absolute right-6" size={20} />
       </div>
-      {/* textarea */}
       <div className="relative flex items-center">
         <Textarea
           placeholder="Type Your Message Here."

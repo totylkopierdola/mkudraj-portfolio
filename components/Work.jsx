@@ -41,7 +41,6 @@ const Work = () => {
   return (
     <section className="relative mb-12 xl:mb-48">
       <div className="container mx-auto">
-        {/* text */}
         <div className="max-w-[400px] mx-auto xl:mx-0 text-center xl:text-left mb-12 xl:h-[400px] flex flex-col justify-center items-center xl:items-start">
           <h2 className="section-title mb-4">
             <LuCircleSlash
@@ -57,7 +56,6 @@ const Work = () => {
             <Button>All projects</Button>
           </Link>
         </div>
-        {/* slider */}
         <div className="xl:max-w-[1000px] xl:absolute right-0 top-0">
           <Swiper
             className="h-[480px]"
@@ -70,12 +68,7 @@ const Work = () => {
             spaceBetween={30}
             modules={[Pagination]}
             pagination={{ clickable: true, color: "red" }}
-            // style={{
-            //   "--swiper-navigation-color": "#000",
-            //   "--swiper-pagination-color": "#fff",
-            // }}
           >
-            {/* show only the first 4 projects for the slides */}
             {projectData.slice(0, 4).map((project, index) => {
               return (
                 <SwiperSlide key={index}>

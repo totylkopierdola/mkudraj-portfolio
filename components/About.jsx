@@ -105,7 +105,6 @@ const About = () => {
           About me
         </h2>
         <div className="flex flex-col xl:flex-row">
-          {/* image */}
           <div className="hidden xl:flex flex-1 relative">
             <motion.div
               className=""
@@ -115,7 +114,6 @@ const About = () => {
                 transition: {
                   duration: 5,
                   repeat: Infinity,
-                  // repeatDelay: 0.2,
                   repeatType: "reverse",
                 },
               }}
@@ -146,12 +144,9 @@ const About = () => {
                   Qualifications
                 </TabsTrigger>
               </TabsList>
-              {/* tabs content */}
               <div className="text-lg mt-4 xl:mt-8">
-                {/* personal */}
                 <TabsContent value="personal">
                   <div className="text-center xl:text-left">
-                    {/* icons */}
                     <div className="grid xl:grid-cols-2 gap-4 mb-12">
                       {infoData.map((item, index) => {
                         return (
@@ -165,7 +160,6 @@ const About = () => {
                         );
                       })}
                     </div>
-                    {/* languages */}
                     <div className="flex flex-col gap-y-2">
                       <div className="text-primary">Language Skill</div>
                       <div className="border-b border-border"></div>
@@ -178,10 +172,8 @@ const About = () => {
                     </div>
                   </div>
                 </TabsContent>
-                {/* qualifications */}
                 <TabsContent value="qualifications">
                   <div>
-                    {/* experience & education wrapper */}
                     <div className="grid md:grid-cols-2 gap-y-8">
                       {/* experience */}
                       <div className="flex flex-col gap-y-6">
@@ -191,7 +183,6 @@ const About = () => {
                             {getData(qualificationData, "experience").title}
                           </h4>
                         </div>
-                        {/* list */}
                         <div className="flex flex-col gap-y-8">
                           {getData(qualificationData, "experience").data.map(
                             (item, index) => {
@@ -218,7 +209,6 @@ const About = () => {
                           )}
                         </div>
                       </div>
-                      {/* education */}
                       <div className="flex flex-col gap-y-6">
                         <div className="flex gap-x-4 items-center text-[22px] text-primary">
                           <MdSchool size={28} />
@@ -226,7 +216,6 @@ const About = () => {
                             {getData(qualificationData, "education").title}
                           </h4>
                         </div>
-                        {/* list */}
                         <div className="flex flex-col gap-y-8">
                           {getData(qualificationData, "education").data.map(
                             (item, index) => {
@@ -256,15 +245,12 @@ const About = () => {
                     </div>
                   </div>
                 </TabsContent>
-                {/* skills */}
 
                 <TabsContent value="skills">
                   <div className="text-center xl:text-left mb-4">
-                    {/* skills */}
                     <div className="mb-4">
                       <h4 className="text-xl font-semibold mb-2">Skills</h4>
                       <div className="border-b border-border mb-4"></div>
-                      {/* skill list */}
                       <div>
                         {getData(skillData, "skills").data.map(
                           (item, index) => {
@@ -350,7 +336,6 @@ const About = () => {
                     </div>
                   </div>
                   <div className="text-center xl:text-left mb-4">
-                    {/* certificates */}
                     <h4 className="text-xl font-semibold mb-2">Certificates</h4>
                     <div className="border-b border-border mb-4"></div>
                     <div className="flex flex-wrap gap-4 flex-col">
