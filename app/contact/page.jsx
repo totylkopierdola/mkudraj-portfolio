@@ -1,6 +1,6 @@
 "use client";
 import { MailIcon, HomeIcon, PhoneCall } from "lucide-react";
-import Form from "@/components/ui/Form";
+import Form from "@/components/Form";
 import Image from "next/image";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";

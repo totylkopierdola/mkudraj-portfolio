@@ -1,4 +1,4 @@
-import Socials from "./ui/Socials";
+import Socials from "./Socials";
 
 const Footer = () => {
   return (

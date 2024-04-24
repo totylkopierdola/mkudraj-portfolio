@@ -1,13 +1,7 @@
 "use client";
-import DevImg from "./ui/DevImg";
+import DevImg from "./DevImg";
 import Image from "next/image";
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-} from "@/components/ui/external/tabs";
-import { motion } from "framer-motion";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { LuCircleSlash } from "react-icons/lu";
 import { SiSitecore } from "react-icons/si";
 import { FaExternalLinkSquareAlt } from "react-icons/fa";
@@ -23,7 +17,6 @@ import {
 } from "react-icons/md";
 
 import Link from "next/link";
-import Technologies from "./ui/Technologies";
 
 const infoData = [
   {

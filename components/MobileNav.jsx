@@ -1,15 +1,11 @@
-import {
-  Sheet,
-  SheetContent,
-  SheetTrigger,
-} from "@/components/ui/external/sheet";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { AlignJustify } from "lucide-react";
 
 import Nav from "./Nav";
-import Socials from "./ui/Socials.jsx";
+import Socials from "./Socials";
 import Link from "next/link";
-import LogoLight from "./ui/Logo/LogoLight";
-import LogoDark from "./ui/Logo/LogoDark";
+import LogoLight from "./Logo/LogoLight";
+import LogoDark from "./Logo/LogoDark";
 import { useTheme } from "next-themes";
 
 const MobileNav = (isClient) => {

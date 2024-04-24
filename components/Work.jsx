@@ -1,11 +1,11 @@
 "use client";
 import Link from "next/link";
-import { Button } from "./ui/external/button";
+import { Button } from "./ui/button";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
-import ProjectCard from "@/components/ui/ProjectCard";
+import ProjectCard from "@/components/ProjectCard";
 import { LuCircleSlash } from "react-icons/lu";
 
 const projectData = [

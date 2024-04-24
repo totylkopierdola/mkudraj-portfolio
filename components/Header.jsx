@@ -1,7 +1,7 @@
 "use client";
-import ThemeToggler from "./ui/ThemeToggler";
-import LogoDark from "./ui/Logo/LogoDark";
-import LogoLight from "./ui/Logo/LogoLight";
+import ThemeToggler from "./ThemeToggler";
+import LogoDark from "./Logo/LogoDark";
+import LogoLight from "./Logo/LogoLight";
 import Nav from "./Nav";
 import MobileNav from "./MobileNav";
 import { useTheme } from "next-themes";

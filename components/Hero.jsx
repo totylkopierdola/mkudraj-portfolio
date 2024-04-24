@@ -2,10 +2,10 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Button } from "./ui/external/button";
+import { Button } from "./ui/button";
 import { Download, Send } from "lucide-react";
-import Socials from "./ui/Socials";
-import Badge from "./ui/Badge";
+import Socials from "./Socials";
+import Badge from "./Badge";
 import { HiBolt } from "react-icons/hi2";
 import { RiBriefcase4Fill, RiTimerFlashFill } from "react-icons/ri";
 import { MdKeyboardArrowDown } from "react-icons/md";
