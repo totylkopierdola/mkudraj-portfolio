@@ -12,7 +12,7 @@ const Contact = () => {
 
   useEffect(() => {
     setIsClient(true);
-  });
+  }, []);
 
   return (
     <section>
