@@ -11,6 +11,7 @@ import { motion } from "framer-motion";
 import { LuCircleSlash } from "react-icons/lu";
 import { SiSitecore } from "react-icons/si";
 import { FaExternalLinkSquareAlt } from "react-icons/fa";
+import Technologies from "./Technologies";
 
 import {
   MdPerson,
@@ -112,23 +113,10 @@ const About = () => {
         </h2>
         <div className="flex flex-col xl:flex-row">
           <div className="hidden xl:flex flex-1 relative">
-            {/* <motion.div
-              className=""
-              animate={{
-                y: [-50, -40],
-                rotate: [0, 2],
-                transition: {
-                  duration: 5,
-                  repeat: Infinity,
-                  repeatType: "reverse",
-                },
-              }}
-            > */}
             <DevImg
               containerStyles="w-[605px] h-[605px] bg-no-repeat relative scale-x-[-1] animate-bouncetwo"
               imgSrc="/about/coding-hands.svg"
             />
-            {/* </motion.div> */}
           </div>
           {/* tabs */}
           <div className="flex-1">
