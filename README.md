@@ -1,6 +1,6 @@
 # Mateusz Kudraj - Web Developer
 
-![Logo](link-to-your-logo.png)
+![Logo](https://github.com/totylkopierdola/mkudraj-portfolio/blob/master/public/LOGOlight.png)
 
 ## 🌟 Introduction
 
