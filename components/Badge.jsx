@@ -7,16 +7,29 @@ const Badge = ({
   endCountNum,
   endCountText,
   badgeText,
+  nowrap,
+  jumpOnHover,
 }) => {
   return (
-    <div className={`badge ${containerStyles}`}>
+    <div
+      className={`badge ${containerStyles} ${
+        jumpOnHover &&
+        `hover:translate-y-[-7px] transition-transform duration-300`
+      }`}
+    >
       <div className="text-3xl text-primary">{icon}</div>
       <div className="flex items-center gap-x-2">
-        <div className="text-4xl leading-none font-bold text-primary">
-          <CountUp end={endCountNum} delay={1} duration={4} />
-          {endCountText}
-        </div>
-        <div className="max-w-[70px] leading-none text-[15px] font-medium text-black">
+        {endCountNum && (
+          <div className="text-4xl leading-none font-bold text-primary">
+            <CountUp end={endCountNum} delay={1} duration={4} />
+            {endCountText}
+          </div>
+        )}
+        <div
+          className={`max-w-[70px] leading-none text-[15px] font-medium text-black ${
+            nowrap && "text-nowrap"
+          }`}
+        >
           {badgeText}
         </div>
       </div>
