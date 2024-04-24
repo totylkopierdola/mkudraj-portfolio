@@ -52,7 +52,7 @@ const Work = () => {
           <p className="subtitle mb-8">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit.
           </p>
-          <Link href="/projects">
+          <Link href="/projects" aria-label="All projects">
             <Button>All projects</Button>
           </Link>
         </div>

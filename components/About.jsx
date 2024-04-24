@@ -264,6 +264,7 @@ const About = () => {
                         href="https://cert.efset.org/gSML9z"
                         target="_blank"
                         className="flex items-center gap-2 text-pink-500 justify-center xl:justify-start"
+                        aria-label="English Certificate EFSET (C1 Advanced)"
                       >
                         <FaExternalLinkSquareAlt className="hidden md:block" />
                         English Certificate EFSET (C1 Advanced)
@@ -279,6 +280,7 @@ const About = () => {
                         href="https://drive.google.com/file/d/1sHPOwyaxx9QQXYTypFWE4fZzkGEfCk7V/view"
                         target="_blank"
                         className="flex items-center gap-2 text-[#069399] justify-center xl:justify-start"
+                        aria-label="Sitecore OrderCloud"
                       >
                         <FaExternalLinkSquareAlt className="hidden md:block" />
                         Sitecore OrderCloud

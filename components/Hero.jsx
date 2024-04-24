@@ -36,7 +36,7 @@ const Hero = () => {
               Typescript. Proficient in Sitecore CMS, JavaScript, HTML, and CSS.
             </p>
             <div className="flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12">
-              <Link href="/contact">
+              <Link href="/contact" aria-label="Contact me">
                 <Button className="gap-x-2" size="lg">
                   Contact me <Send size={18} />
                 </Button>

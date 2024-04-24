@@ -36,7 +36,7 @@ const Header = () => {
     >
       <div className="container mx-auto">
         <div className="flex justify-between items-center">
-          <Link href="/">
+          <Link href="/" aria-label="Home">
             {isClient && theme === "light" ? <LogoDark /> : <LogoLight />}
           </Link>
           <div className="flex w-full justify-end items-center gap-x-6 mr-4">

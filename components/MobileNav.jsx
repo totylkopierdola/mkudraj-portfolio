@@ -18,7 +18,7 @@ const MobileNav = (isClient) => {
       <SheetContent>
         <div className="flex flex-col items-center justify-between h-full py-8">
           <div className="flex flex-col items-center gap-y-32">
-            <Link href="/">
+            <Link href="/" aria-label="Home">
               {isClient && theme === "light" ? <LogoDark /> : <LogoLight />}
             </Link>
             <Nav
