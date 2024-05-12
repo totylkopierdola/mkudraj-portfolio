@@ -30,11 +30,6 @@ const Nav = ({ containerStyles, linkStyles, underlineStyles }) => {
               />
             )}
             {link.name}{" "}
-            {link.name === "my projects" && (
-              <span className="absolute  uppercase text-[0.6rem] -top-[8px] -right-2 rotate-[9deg] ">
-                soon !
-              </span>
-            )}
           </Link>
         );
       })}

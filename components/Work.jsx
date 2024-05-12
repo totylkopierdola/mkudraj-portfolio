@@ -10,11 +10,29 @@ import { LuCircleSlash } from "react-icons/lu";
 
 const projectData = [
   {
+    image: "https://i.imgur.com/96iI9bg.png",
+    category: "React",
+    name: "Resorts World Sentosa",
+    description:
+      "Booking and Reservation Management Panel (React, Typescript, Sitecore)",
+    link: "https://www.rwsentosa.com/",
+    github: "",
+  },
+  {
+    image: "https://i.imgur.com/6nFboU6.png",
+    category: "React",
+    name: "Ortheo3D",
+    description:
+      "Purchase medicine products panel \n(React, Typescript, Redux)",
+    link: "https://ortheo3d.com/",
+    github: "",
+  },
+  {
     image: "https://i.imgur.com/JrNjMlH.png",
     category: "React",
     name: "Employ Marketplace",
     description:
-      "Lead-generating platform with subscription purchase option (React, Appdirect)",
+      "Lead-generating platform with subscribtions\n(React, Appdirect)",
     link: "https://employinc.com/",
     github: "",
   },
@@ -32,7 +50,7 @@ const projectData = [
     category: "React",
     name: "GetMen",
     description:
-      "Job board website for Eastern Europe (React, Typescript, TailwindCSS)",
+      "Job board website for Eastern Europe\n(React, Typescript, TailwindCSS)",
     link: "https://www.getmen.com/",
     github: "",
   },
@@ -40,7 +58,7 @@ const projectData = [
     image: "https://i.imgur.com/Jwz8gnC.png",
     category: "JS",
     name: "Speednet",
-    description: "Landing page for software company (HTML, SCSS, JS, MOBX)",
+    description: "Landing page for software company\n(HTML, SCSS, JS, MOBX)",
     link: "https://speednet.pl/",
     github: "",
   },
