@@ -10,6 +10,15 @@ import { LuCircleSlash } from "react-icons/lu";
 
 const projectData = [
   {
+    image: "https://i.imgur.com/JrNjMlH.png",
+    category: "React",
+    name: "Employ Marketplace",
+    description:
+      "Lead-generating platform with subscription purchase option (React, Appdirect)",
+    link: "https://employinc.com/",
+    github: "",
+  },
+  {
     image: "https://i.imgur.com/qWncjGc.png",
     category: "Next.js",
     name: "Faceit Analyser v2",
