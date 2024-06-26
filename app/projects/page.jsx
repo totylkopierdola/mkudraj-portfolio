@@ -37,7 +37,7 @@ const projectData = [
     name: "Faceit Analyser v2",
     description:
       "Website for CS players statistics and news (Next.js, TailwindCSS)",
-    link: "",
+    link: "https://mkudraj-portfolio-git-folder-bugfix-totylkopierdolas-projects.vercel.app/",
     github: "https://github.com/totylkopierdola/faceit-analyser-v2",
   },
   {
